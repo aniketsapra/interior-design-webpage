@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.model {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  transition: opacity .4s ease, visibility .4s ease, transform .5s ease-in-out ;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.model.open{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.model img{
+  width:auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+}
+
+.model.open svg{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.hoverzoom {  
+  overflow:hidden;
+}
+
+.hovereffect {
+    width: 100%;
+    transition: transform 0.4s ease;
+    transform-origin: 50% 50%;}
+
+.hovereffect:hover{
+    transform: scale(1.2);
+    width: 100%;
+  }
+
+.textnav {
+  letter-spacing: 0.05em;
+  color:white;
+  transition: color 0.4s ease;  
+}
+
+.textnav:hover{
+  color: #E2BFB3;
+}
+
+.tf {
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  transition: color 0.4s ease;  
+}
+
+.tf:hover{
+  color:white;
+}
+
+.socialMedia svg {
+  margin: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
